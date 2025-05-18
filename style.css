@@ -747,13 +747,12 @@ img {
 /* Hero section com Parallax e Typed.js */
 .hero {
     position: relative;
-    height: 100vh; /* Aumentado para ocupar toda a altura da tela */
-    min-height: 700px; /* Altura mínima maior */
+    height: 80vh;
+    min-height: 600px;
     display: flex;
     align-items: center;
     overflow: hidden;
     background-color: var(--color-dark);
-    width: 100%; /* Garantir largura total */
 }
 
 .hero-background {
@@ -767,8 +766,7 @@ img {
 .hero-background img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Preencher toda a área disponível */
-    object-position: center; /* Centralizar a imagem */
+    object-fit: cover;
     filter: grayscale(100%) contrast(120%);
 }
 
@@ -981,12 +979,9 @@ img {
 /* Grid de produtos */
 .produtos-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Layout de uma coluna em mobile primeiro */
-    gap: var(--spacing-2xl); /* Aumentar MAIS o espaçamento entre os itens */
+    grid-template-columns: repeat(1, 1fr); /* Layout de uma coluna em mobile primeiro */
+    gap: var(--spacing-lg); /* Espaçamento entre itens */
     position: relative;
-    width: 100%; /* Garantir largura total */
-    max-width: 100%; /* Evitar overflow horizontal */
-    padding: 0; /* Remover padding que possa afetar a largura */
 }
 
 .produto-item {
@@ -994,15 +989,11 @@ img {
     overflow: hidden;
     transition: all var(--transition-medium);
     background-color: var(--color-grey-900);
-    box-shadow: var(--shadow-md); /* Sombra mais pronunciada */
-    margin-bottom: var(--spacing-2xl); /* Aumentar ainda mais a margem inferior */
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-md);
     border-radius: var(--border-radius-sm);
     display: flex;
     flex-direction: column; /* Organiza o conteúdo verticalmente */
-    height: auto; /* Altura automática baseada no conteúdo */
-    min-height: 75vh; /* Uso de unidade viewport height - MUITO maior */
-    width: 100%; /* Largura total */
-    max-width: 100%; /* Evitar overflow horizontal */
 }
 
 /* Contêiner de imagem com altura automática */
@@ -1010,16 +1001,14 @@ img {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 70vh; /* Unidade viewport height para ocupar quase toda a tela */
-    min-height: 550px; /* Altura mínima MAIOR para mobile */
+    height: auto; /* Permite que a altura seja determinada pelo conteúdo */
 }
 
 .produto-item img {
     display: block;
     width: 100%;
-    height: 100%; /* Preencher todo o container */
-    object-fit: cover; /* Cobrir todo o espaço, cortando se necessário */
-    object-position: center; /* Centralizar a imagem */
+    height: auto; /* Altura ajustada automaticamente mantendo proporção */
+    object-fit: contain; /* Garante que a imagem seja exibida por completo */
     max-height: none; /* Remove qualquer limite de altura máxima */
     transition: transform var(--transition-slow), filter var(--transition-slow);
     filter: grayscale(100%);
@@ -1895,7 +1884,7 @@ img {
     .footer-content {
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-xl);
-        padding: 0 var(--spacing-md);
+        padding: 0 var(--spacing-md); /* Adicionar um pouco de padding horizontal */
     }
     
     .product-details {
@@ -1907,45 +1896,21 @@ img {
         flex: 1;
     }
     
-    /* Restaurar o estilo para tablet */
-    .produtos .container {
-        width: 90%;
-        max-width: var(--container-max-width);
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    
-    .produtos.section-padding {
-        padding-left: inherit;
-        padding-right: inherit;
-    }
-    
     /* Grade de produtos em 2 colunas para tablet */
     .produtos-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-lg);
-        margin: 0;
-        width: 100%;
-    }
-    
-    .produto-item {
-        min-height: 450px; /* Altura para tablet */
-        border-radius: var(--border-radius-sm); /* Restaurar arredondamento */
-    }
-    
-    .produto-img-container {
-        min-height: 400px; /* Altura para tablet */
+        gap: var(--spacing-md);
     }
     
     /* Ajuste do gradiente para telas maiores */
     .produto-info {
         background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 70%, transparent);
-        padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+        padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
     }
     
     /* Itens de destaque maiores em tablet */
     .destaque-item {
-        width: 400px;
+        width: 400px; /* Ainda maior em tablet */
     }
     
     /* Vantagens em 2 colunas */
@@ -1965,15 +1930,7 @@ img {
     /* Grade de produtos em 3 colunas para desktop - como no site de referência */
     .produtos-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--spacing-xl); /* Aumento do espaçamento entre colunas no desktop */
-    }
-    
-    .produto-item {
-        min-height: 380px; /* Ajuste para desktop */
-    }
-    
-    .produto-img-container {
-        min-height: 330px; /* Ajuste para desktop */
+        gap: var(--spacing-lg); /* Espaçamento entre colunas no desktop */
     }
     
     /* Gradiente mais suave em telas grandes */
@@ -2080,44 +2037,9 @@ img {
         max-width: 100%;
     }
     
-    /* Ajuste especial para deixar os produtos MUITO maiores em mobile */
+    /* Grade de produtos em 1 coluna para mobile */
     .produtos-grid {
-        grid-template-columns: 1fr; /* Garantir uma coluna */
-        gap: var(--spacing-2xl); /* Grande espaço entre os itens */
-        padding: 0; /* Remover padding lateral */
-        margin: 0 -15px; /* Compensar padding do container para usar toda a largura */
-        width: calc(100% + 30px); /* Ocupar toda a largura + compensação de margin */
-    }
-    
-    .produto-item {
-        min-height: 75vh; /* Muito alto para ocupar grande parte da tela */
-        margin-bottom: var(--spacing-2xl); /* Mais espaço entre produtos */
-        border-radius: 0; /* Remover arredondamento para usar largura completa */
-    }
-    
-    .produto-img-container {
-        min-height: 70vh; /* Muito alto para ocupar grande parte da tela */
-    }
-    
-    /* Melhorar aspecto de texto e botão */
-    .produto-info {
-        padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md); /* Mais padding vertical */
-    }
-    
-    .produto-info h3 {
-        font-size: 1.3rem; /* Maior para mobile */
-        margin-bottom: var(--spacing-sm);
-    }
-    
-    .preco {
-        font-size: 1.2rem; /* Maior para mobile */
-        margin-bottom: var(--spacing-md);
-    }
-    
-    .btn-comprar {
-        padding: 0.9rem 2.5rem; /* Botão maior */
-        min-width: 220px; /* Botão bem largo */
-        font-size: 1rem; /* Texto maior */
+        grid-template-columns: 1fr;
     }
     
     .destaques-container {
@@ -2133,6 +2055,29 @@ img {
         margin-bottom: var(--spacing-lg);
     }
     
+    /* Ajuste para melhor exibição em mobile */
+    .produto-info {
+        padding: var(--spacing-sm);
+    }
+    
+    .produto-info h3 {
+        font-size: 0.9rem;
+    }
+    
+    .preco {
+        font-size: 0.9rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .btn-comprar {
+        padding: 0.6rem 1.2rem;
+        min-width: 120px;
+        font-size: 0.75rem;
+        font-weight: 600; /* Aumentar peso da fonte */
+        background-color: rgba(0, 0, 0, 0.6); /* Aumentar opacidade do fundo para melhor contraste */
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+    }
+    
     /* Vantagens mais compactas em mobile */
     .vantagens-container {
         gap: var(--spacing-lg);
@@ -2141,28 +2086,6 @@ img {
     .lottie-container {
         width: 60px;
         height: 60px;
-    }
-    
-    /* Ajuste para a seção que contém os produtos para remove padding lateral */
-    .produtos.section-padding {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-    .produtos .container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    
-    /* Cabeçalho da seção ainda precisa de padding */
-    .produtos .section-header {
-        padding: 0 15px;
-    }
-    
-    .main-search-container {
-        padding: 0 15px;
     }
 }
 
