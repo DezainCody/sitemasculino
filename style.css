@@ -1873,6 +1873,36 @@ img {
     transform: translateY(-2px);
 }
 
+/* Mensagem de "nenhum destaque encontrado" */
+.destaques-nao-encontrados {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: var(--spacing-xl);
+    z-index: 10;
+    color: var(--color-white);
+}
+
+.destaques-nao-encontrados i {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+}
+
+.destaques-nao-encontrados p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+    font-weight: 500;
+    text-align: center;
+}
+
 /* Responsividade - AJUSTADA PARA O ESTILO DO SITE DE REFERÊNCIA */
 @media (min-width: 768px) {
     /* Tablet */
@@ -2203,8 +2233,13 @@ img {
     display: none !important;
 }
 
+/* Classe para destaques escondidos após pesquisa */
+.destaque-hidden {
+    display: none !important;
+}
+
 /* Ajustes para garantir vazio da mensagem de não encontrado */
-.produtos-nao-encontrados.active {
+.destaques-nao-encontrados.active {
     display: flex;
 }
 
@@ -2356,14 +2391,17 @@ img {
 }
 
 /* Melhorar contraste para o botão de limpeza de pesquisa */
-#limpar-pesquisa {
+#limpar-pesquisa-destaques {
     background-color: var(--color-white);
     color: var(--color-dark);
     border: 1px solid var(--color-white);
     font-weight: 500;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
 
-#limpar-pesquisa:hover {
+#limpar-pesquisa-destaques:hover {
     background-color: var(--color-grey-200);
 }
 

@@ -194,16 +194,6 @@
                 <h2>NOSSA COLEÇÃO</h2>
             </div>
             
-            <div class="main-search-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="main-search-bar">
-                    <i class="fas fa-search search-icon-main"></i>
-                    <input type="text" id="main-search-input" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos">
-                    <button id="main-search-clear" class="main-search-clear" aria-label="Limpar pesquisa">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-            </div>
-            
             <div class="produtos-grid">
                 <div class="produto-item produto animated-card" data-aos="fade-up" data-aos-delay="100" data-id="1" data-nome="Camiseta Oversized Black" data-preco="89.90" data-img="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=500&q=80">
                     <div class="produto-img-container">
@@ -270,12 +260,6 @@
                         <button class="btn-comprar">COMPRAR</button>
                     </div>
                 </div>
-                
-                <div class="produtos-nao-encontrados">
-                    <i class="fas fa-search"></i>
-                    <p>Nenhum produto encontrado para sua pesquisa.</p>
-                    <button id="limpar-pesquisa" class="btn btn-outline">Limpar Pesquisa</button>
-                </div>
             </div>
         </div>
     </section>
@@ -286,6 +270,17 @@
             <div class="section-header" data-aos="fade-up">
                 <span class="section-tag">NOVIDADES</span>
                 <h2>DESTAQUES DA ESTAÇÃO</h2>
+            </div>
+            
+            <!-- Barra de pesquisa na seção de destaques -->
+            <div class="main-search-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="main-search-bar">
+                    <i class="fas fa-search search-icon-main"></i>
+                    <input type="text" id="main-search-input" placeholder="Pesquisar destaques..." aria-label="Pesquisar destaques">
+                    <button id="main-search-clear" class="main-search-clear" aria-label="Limpar pesquisa">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
             </div>
             
             <div class="destaques-container" data-aos="fade-up" data-aos-delay="200">
@@ -322,7 +317,7 @@
                     
                     <div class="destaque-item produto animated-card" data-id="9" data-nome="Calça Jogger Black" data-preco="159.90" data-img="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=400&q=80">
                         <div class="destaque-img-container">
-                            <img src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=400&q=80" alt="Calça Jogger Black - Conforto e estilo para o dia a dia com acabamento premium">
+                            <img src="https://i.postimg.cc/L4CKNscM/Cal-a-Jogger-Sarja-Mas.jpg" alt="Calça Jogger Black - Conforto e estilo para o dia a dia com acabamento premium">
                         </div>
                         <div class="destaque-info">
                             <h3>CALÇA JOGGER BLACK</h3>
@@ -352,6 +347,13 @@
                             <button class="btn-comprar">COMPRAR</button>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Adicionado div para mensagem de "nenhum produto encontrado" na seção de destaques -->
+                <div class="destaques-nao-encontrados">
+                    <i class="fas fa-search"></i>
+                    <p>Nenhum destaque encontrado para sua pesquisa.</p>
+                    <button id="limpar-pesquisa-destaques" class="btn btn-outline">Limpar Pesquisa</button>
                 </div>
             </div>
         </div>
