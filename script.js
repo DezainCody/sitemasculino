@@ -985,7 +985,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
     
             // Link WhatsApp otimizado
-            const whatsappLink = `https://wa.me/5583991816153?text=${formatWhatsAppMessage(pedidoData)}`;
+            const whatsappLink = `https://wa.me/5583991816152?text=${formatWhatsAppMessage(pedidoData)}`;
             
             // Abrir WhatsApp em nova aba
             window.open(whatsappLink, '_blank');
