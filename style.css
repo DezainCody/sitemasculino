@@ -205,23 +205,22 @@ img {
 
 .btn-comprar {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6); /* Aumentar a opacidade do fundo */
+    background-color: var(--color-dark);
     color: var(--color-white);
-    border: 1px solid var(--color-white);
+    border: 1px solid var(--color-dark);
     padding: 0.6rem 1.5rem;
     font-size: 0.8rem;
-    font-weight: 600; /* Aumentar peso da fonte */
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
     transition: all var(--transition-medium);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Adicionar sombra de texto */
 }
 
 .btn-comprar:hover {
     background-color: var(--color-white);
     color: var(--color-dark);
-    text-shadow: none;
+    border: 1px solid var(--color-dark);
 }
 
 /* Estilo para o botão de compra na seção de destaques */
@@ -230,18 +229,16 @@ img {
     padding: 0.8rem 1.5rem;
     letter-spacing: 2px;
     border-width: 1px;
-    border-color: var(--color-white);
+    border-color: var(--color-dark);
     color: var(--color-white);
-    background-color: rgba(0, 0, 0, 0.6); /* Aumentar a opacidade do fundo */
+    background-color: var(--color-dark);
     transition: all var(--transition-medium);
-    font-weight: 600; /* Aumentar peso da fonte */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Adicionar sombra de texto */
+    font-weight: 600;
 }
 
 .destaque-info .btn-comprar:hover {
     background-color: var(--color-white);
     color: var(--color-dark);
-    text-shadow: none;
 }
 
 /* Seções e Cabeçalhos */
@@ -739,7 +736,7 @@ img {
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
-    color: var(--color-white); /* Corrigido para branco para melhor visibilidade */
+    color: var(--color-white);
     font-size: 1.1rem;
     cursor: pointer;
 }
@@ -781,7 +778,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%; /* Maior que 100% para criar o efeito de parallax */
+    height: 120%;
     z-index: 0;
     will-change: transform;
     transform: translateZ(0);
@@ -808,15 +805,15 @@ img {
     margin-bottom: var(--spacing-md);
     color: var(--color-white);
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: var(--spacing-lg);
     color: var(--color-white);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
-    font-weight: 400; /* Aumentar o peso da fonte para melhorar legibilidade */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
 }
 
 /* Efeito typed.js */
@@ -824,7 +821,7 @@ img {
     color: var(--color-white);
     font-weight: 700;
     position: relative;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .typed-cursor {
@@ -903,10 +900,12 @@ img {
 .vantagem-item {
     text-align: center;
     transition: transform var(--transition-medium), box-shadow var(--transition-medium);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius-md);
-    background-color: var(--color-dark);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    border: 1px solid var(--color-grey-200);
+    box-shadow: var(--shadow-sm);
 }
 
 .vantagem-item:hover {
@@ -926,12 +925,11 @@ img {
 .vantagem-item h4 {
     font-size: 1rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--color-white);
+    color: var(--color-dark);
     position: relative;
     display: inline-block;
     padding-bottom: var(--spacing-xs);
     font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
 }
 
 .vantagem-item h4::after {
@@ -942,7 +940,7 @@ img {
     transform: translateX(-50%);
     width: 30px;
     height: 1px;
-    background-color: var(--color-white);
+    background-color: var(--color-dark);
     transition: width var(--transition-medium);
 }
 
@@ -952,9 +950,9 @@ img {
 
 .vantagem-item p {
     font-size: 0.9rem;
-    color: var(--color-grey-200); /* Cor mais clara para melhor contraste */
+    color: var(--color-grey-600);
     margin-bottom: 0;
-    font-weight: 400; /* Aumentar peso da fonte */
+    font-weight: 400;
 }
 
 /* Produtos section */
@@ -965,11 +963,11 @@ img {
 
 .produtos .section-header h2 {
     color: var(--color-white);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .produtos .section-tag {
-    color: var(--color-grey-200); /* Cor mais clara para melhor contraste */
+    color: var(--color-grey-200);
 }
 
 .produtos .section-header h2::after {
@@ -979,8 +977,8 @@ img {
 /* Grid de produtos */
 .produtos-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Layout de uma coluna em mobile primeiro */
-    gap: var(--spacing-lg); /* Espaçamento entre itens */
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg);
     position: relative;
 }
 
@@ -988,12 +986,12 @@ img {
     position: relative;
     overflow: hidden;
     transition: all var(--transition-medium);
-    background-color: var(--color-grey-900);
+    background-color: var(--color-white);
     box-shadow: var(--shadow-sm);
     margin-bottom: var(--spacing-md);
     border-radius: var(--border-radius-sm);
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    flex-direction: column;
 }
 
 /* Contêiner de imagem com altura automática */
@@ -1001,52 +999,46 @@ img {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: auto; /* Permite que a altura seja determinada pelo conteúdo */
+    height: auto;
 }
 
 .produto-item img {
     display: block;
     width: 100%;
-    height: auto; /* Altura ajustada automaticamente mantendo proporção */
-    object-fit: contain; /* Garante que a imagem seja exibida por completo */
-    max-height: none; /* Remove qualquer limite de altura máxima */
+    height: auto;
+    object-fit: contain;
+    max-height: none;
     transition: transform var(--transition-slow), filter var(--transition-slow);
     filter: grayscale(100%);
 }
 
 .produto-item:hover img {
-    transform: scale(1.03); /* Efeito de zoom suave ao passar o mouse */
-    filter: grayscale(50%); /* Reduz um pouco o grayscale ao passar o mouse */
+    transform: scale(1.03);
+    filter: grayscale(50%);
 }
 
-/* Estilo para informações do produto SOBREPOSTAS à imagem */
+/* Estilo para informações do produto ABAIXO da imagem */
 .produto-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: static;
     width: 100%;
     padding: var(--spacing-md);
     text-align: center;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 60%, transparent);
-    color: var(--color-white);
-    z-index: 2;
-    transform: translateY(0); /* Garante posicionamento correto */
+    background-color: var(--color-white);
+    color: var(--color-dark);
 }
 
 .produto-info h3 {
     font-size: 1rem;
     margin-bottom: var(--spacing-xs);
     font-weight: 600;
-    color: var(--color-white);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+    color: var(--color-dark);
 }
 
 .preco {
-    color: var(--color-white);
-    font-weight: 600; /* Aumentar peso da fonte */
+    color: var(--color-dark);
+    font-weight: 600;
     margin-bottom: var(--spacing-md);
     font-size: 1rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
 }
 
 /* Animação para cards (produtos) */
@@ -1133,14 +1125,14 @@ img {
 
 .produtos-nao-encontrados i {
     font-size: 2rem;
-    color: var(--color-white); /* Aumentar contraste */
+    color: var(--color-white);
     margin-bottom: var(--spacing-md);
 }
 
 .produtos-nao-encontrados p {
     margin-bottom: var(--spacing-md);
-    color: var(--color-white); /* Aumentar contraste */
-    font-weight: 500; /* Aumentar peso da fonte */
+    color: var(--color-white);
+    font-weight: 500;
 }
 
 /* Destaques section */
@@ -1159,10 +1151,10 @@ img {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: var(--spacing-lg); /* Aumentado para dar mais espaço entre os itens */
+    gap: var(--spacing-lg);
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding: var(--spacing-md) 0 var(--spacing-xl); /* Mais espaço vertical */
+    padding: var(--spacing-md) 0 var(--spacing-xl);
 }
 
 .destaques-slider::-webkit-scrollbar {
@@ -1171,14 +1163,15 @@ img {
 
 .destaque-item {
     flex: 0 0 auto;
-    width: 350px; /* Aumentado de 280px para 350px */
+    width: 350px;
     scroll-snap-align: center;
-    background-color: var(--color-grey-900);
-    box-shadow: var(--shadow-md); /* Sombra mais pronunciada */
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
     transition: all var(--transition-medium);
     overflow: hidden;
     position: relative;
     border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-grey-200);
 }
 
 .destaque-item:hover {
@@ -1190,14 +1183,14 @@ img {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: auto; /* Altura automática baseada no conteúdo */
+    height: auto;
 }
 
 .destaque-item img {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain; /* Garante que a imagem seja exibida por completo */
+    object-fit: contain;
     transition: transform var(--transition-slow);
     filter: grayscale(100%);
 }
@@ -1208,32 +1201,27 @@ img {
 }
 
 .destaque-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: static;
     width: 100%;
     padding: var(--spacing-md);
     text-align: center;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 70%, transparent);
-    color: var(--color-white);
-    z-index: 2;
+    background-color: var(--color-white);
+    color: var(--color-dark);
 }
 
 .destaque-info h3 {
     font-size: 1rem;
     margin-bottom: var(--spacing-xs);
     font-weight: 600;
-    color: var(--color-white);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+    color: var(--color-dark);
 }
 
 /* Preço com melhor contraste */
 .destaque-info .preco {
-    color: var(--color-white); /* Cor de destaque para melhor contraste */
+    color: var(--color-dark);
     font-weight: 600;
     margin-bottom: var(--spacing-md);
     font-size: 1rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .slider-nav-arrow {
@@ -1275,7 +1263,7 @@ img {
 .contato .section-header h2,
 .contato .section-tag {
     color: var(--color-white);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Adicionar sombra para melhorar legibilidade */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .contato .section-header h2::after {
@@ -1294,7 +1282,7 @@ img {
     margin-bottom: var(--spacing-lg);
     padding-bottom: var(--spacing-xs);
     color: var(--color-white);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Adicionar sombra para melhorar legibilidade */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .contato-info h3::after {
@@ -1316,19 +1304,19 @@ img {
 .info-item i {
     width: 20px;
     margin-right: var(--spacing-sm);
-    color: var(--color-white); /* Cor mais clara para melhor contraste */
+    color: var(--color-white);
 }
 
 .info-item p {
     margin-bottom: 0;
-    color: var(--color-white); /* Cor mais clara para melhor contraste */
-    font-weight: 400; /* Aumentar peso da fonte */
+    color: var(--color-white);
+    font-weight: 400;
 }
 
 .info-item p a {
-    color: var(--color-white); /* Cor mais clara para melhor contraste */
+    color: var(--color-white);
     transition: color var(--transition-fast);
-    text-decoration: underline; /* Adicionar sublinhado para indicar link */
+    text-decoration: underline;
 }
 
 .info-item p a:hover {
@@ -1369,7 +1357,7 @@ img {
     margin-bottom: var(--spacing-xs);
     font-size: 0.9rem;
     color: var(--color-white); 
-    font-weight: 500; /* Aumentar peso da fonte para melhor legibilidade */
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1393,7 +1381,7 @@ img {
 .form-group textarea:focus {
     outline: none;
     background-color: var(--color-grey-700);
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2); /* Adicionar contorno ao focar */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
 .btn-submit {
@@ -1402,11 +1390,11 @@ img {
 
 /* Footer com texto preto para melhor contraste */
 .site-footer {
-    background-color: var(--color-white); /* Mudando para fundo branco */
+    background-color: var(--color-white);
     padding: var(--spacing-xl) 0 var(--spacing-md);
-    color: var(--color-dark); /* Texto principal preto */
+    color: var(--color-dark);
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-    border-top: 1px solid var(--color-grey-200); /* Adicionando borda separadora */
+    border-top: 1px solid var(--color-grey-200);
 }
 
 .footer-content {
@@ -1423,25 +1411,25 @@ img {
 }
 
 .footer-logo .logo-text {
-    color: var(--color-dark); /* Texto preto */
+    color: var(--color-dark);
     margin-bottom: var(--spacing-sm);
     font-size: 1.8rem;
-    font-weight: 700; /* Manter negrito para destacar */
+    font-weight: 700;
 }
 
 .footer-logo p {
     text-align: center;
     font-size: 0.95rem;
-    color: var(--color-grey-700); /* Cinza escuro quase preto */
+    color: var(--color-grey-700);
     margin-bottom: var(--spacing-sm);
     font-weight: 400;
-    line-height: 1.5; /* Espaçamento de linha adequado */
+    line-height: 1.5;
 }
 
 .footer-links h3 {
     margin-bottom: var(--spacing-md);
     font-size: 1.1rem;
-    color: var(--color-dark); /* Texto preto */
+    color: var(--color-dark);
     font-weight: 700;
     letter-spacing: 2px;
     border-bottom: 1px solid var(--color-grey-300);
@@ -1456,7 +1444,7 @@ img {
 
 .footer-links ul li a {
     font-size: 0.95rem;
-    color: var(--color-grey-700); /* Cinza escuro quase preto */
+    color: var(--color-grey-700);
     transition: all var(--transition-fast);
     font-weight: 500;
     position: relative;
@@ -1471,9 +1459,9 @@ img {
 }
 
 .footer-links ul li a:hover {
-    color: var(--color-dark); /* Preto quando hover */
+    color: var(--color-dark);
     padding-left: 18px;
-    font-weight: 600; /* Um pouco mais negrito ao passar o mouse */
+    font-weight: 600;
 }
 
 .footer-links ul li a:hover::before {
@@ -1489,11 +1477,10 @@ img {
 
 .footer-bottom p {
     font-size: 0.85rem;
-    color: var(--color-grey-700); /* Cinza escuro quase preto */
+    color: var(--color-grey-700);
     margin-bottom: 0;
     font-weight: 500;
 }
-
 
 /* WhatsApp Button */
 .whatsapp-btn {
@@ -1736,19 +1723,19 @@ img {
     text-align: center;
     margin-bottom: var(--spacing-lg);
     padding-bottom: var(--spacing-sm);
-    border-bottom: 2px solid var(--color-grey-300); /* Borda mais grossa e visível */
+    border-bottom: 2px solid var(--color-grey-300);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--color-dark);
-    font-size: 1.4rem; /* Aumentar tamanho para maior destaque */
+    font-size: 1.4rem;
 }
 
 .checkout-items {
     max-height: 300px;
     overflow-y: auto;
     margin-bottom: var(--spacing-lg);
-    border: 1px solid var(--color-grey-200); /* Adicionar borda para separar visualmente */
+    border: 1px solid var(--color-grey-200);
     border-radius: var(--border-radius-sm);
     padding: var(--spacing-sm);
 }
@@ -1757,8 +1744,8 @@ img {
     display: flex;
     padding-bottom: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
-    border-bottom: 1px solid var(--color-grey-200); /* Borda mais visível */
-    background-color: var(--color-grey-100); /* Adicionar fundo sutil */
+    border-bottom: 1px solid var(--color-grey-200);
+    background-color: var(--color-grey-100);
     padding: var(--spacing-sm);
     border-radius: var(--border-radius-sm);
 }
@@ -1775,7 +1762,7 @@ img {
     border-radius: var(--border-radius-sm);
     margin-right: var(--spacing-sm);
     filter: grayscale(100%);
-    border: 1px solid var(--color-grey-300); /* Adicionar borda para destacar imagem */
+    border: 1px solid var(--color-grey-300);
 }
 
 .checkout-item-details {
@@ -1783,9 +1770,9 @@ img {
 }
 
 .checkout-item-title {
-    font-size: 0.95rem; /* Aumentar tamanho */
+    font-size: 0.95rem;
     margin-bottom: 0.25rem;
-    font-weight: 700; /* Mais negrito */
+    font-weight: 700;
     text-transform: uppercase;
     color: var(--color-dark);
 }
@@ -1793,9 +1780,9 @@ img {
 .checkout-item-details p {
     font-size: 0.85rem;
     margin-bottom: 0.25rem;
-    color: var(--color-grey-700); /* Cor mais escura para melhor contraste */
-    font-weight: 500; /* Aumentar peso da fonte */
-    line-height: 1.4; /* Melhorar espaçamento entre linhas */
+    color: var(--color-grey-700);
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 .checkout-total {
@@ -1803,20 +1790,20 @@ img {
     justify-content: space-between;
     padding: var(--spacing-md);
     margin: var(--spacing-md) 0;
-    border-top: 2px solid var(--color-grey-300); /* Borda mais grossa e visível */
-    border-bottom: 2px solid var(--color-grey-300); /* Adicionar borda inferior */
-    font-size: 1.2rem; /* Aumentar tamanho */
+    border-top: 2px solid var(--color-grey-300);
+    border-bottom: 2px solid var(--color-grey-300);
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 600;
     color: var(--color-dark);
-    background-color: var(--color-grey-100); /* Adicionar fundo sutil */
+    background-color: var(--color-grey-100);
     border-radius: var(--border-radius-sm);
 }
 
 .checkout-total strong {
     color: var(--color-dark);
-    font-weight: 800; /* Mais negrito */
-    font-size: 1.3rem; /* Maior destaque */
+    font-weight: 800;
+    font-size: 1.3rem;
 }
 
 /* Melhorar os campos do formulário de checkout */
@@ -1836,11 +1823,11 @@ img {
 .checkout-form .form-group select,
 .checkout-form .form-group textarea {
     width: 100%;
-    padding: 0.9rem 1rem; /* Campos maiores */
+    padding: 0.9rem 1rem;
     border: 1px solid var(--color-grey-300);
     border-radius: var(--border-radius-sm);
     font-family: var(--font-body);
-    font-size: 0.95rem; /* Tamanho maior */
+    font-size: 0.95rem;
     transition: all var(--transition-fast);
     background-color: var(--color-white);
     color: var(--color-dark);
@@ -1914,7 +1901,7 @@ img {
     .footer-content {
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-xl);
-        padding: 0 var(--spacing-md); /* Adicionar um pouco de padding horizontal */
+        padding: 0 var(--spacing-md);
     }
     
     .product-details {
@@ -1932,15 +1919,9 @@ img {
         gap: var(--spacing-md);
     }
     
-    /* Ajuste do gradiente para telas maiores */
-    .produto-info {
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 70%, transparent);
-        padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
-    }
-    
     /* Itens de destaque maiores em tablet */
     .destaque-item {
-        width: 400px; /* Ainda maior em tablet */
+        width: 400px;
     }
     
     /* Vantagens em 2 colunas */
@@ -1952,21 +1933,15 @@ img {
 @media (min-width: 992px) {
     /* Desktop */
     .footer-content {
-        grid-template-columns: 2fr 1fr 1fr; /* Primeira coluna maior para o logo e descrição */
+        grid-template-columns: 2fr 1fr 1fr;
         gap: var(--spacing-xl);
-        padding: 0 var(--spacing-xl); /* Mais padding horizontal */
+        padding: 0 var(--spacing-xl);
     }
     
     /* Grade de produtos em 3 colunas para desktop - como no site de referência */
     .produtos-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--spacing-lg); /* Espaçamento entre colunas no desktop */
-    }
-    
-    /* Gradiente mais suave em telas grandes */
-    .produto-info {
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 80%, transparent);
-        padding-top: var(--spacing-xl);
+        gap: var(--spacing-lg);
     }
     
     /* Botão maior em desktop */
@@ -1977,7 +1952,7 @@ img {
     
     /* Itens de destaque maiores em desktop */
     .destaque-item {
-        width: 400px; /* Máximo em desktop */
+        width: 400px;
     }
     
     /* Espaço adicional para o slider de destaques */
@@ -2018,7 +1993,7 @@ img {
         color: var(--color-white);
         font-size: 1rem;
         font-weight: 500;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Adicionar sombra para melhorar legibilidade */
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     }
     
     .nav-link::after {
@@ -2088,6 +2063,8 @@ img {
     /* Ajuste para melhor exibição em mobile */
     .produto-info {
         padding: var(--spacing-sm);
+        background-color: var(--color-white);
+        color: var(--color-dark);
     }
     
     .produto-info h3 {
@@ -2103,14 +2080,34 @@ img {
         padding: 0.6rem 1.2rem;
         min-width: 120px;
         font-size: 0.75rem;
-        font-weight: 600; /* Aumentar peso da fonte */
-        background-color: rgba(0, 0, 0, 0.6); /* Aumentar opacidade do fundo para melhor contraste */
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+        font-weight: 600;
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border: 1px solid var(--color-dark);
     }
     
-    /* Vantagens mais compactas em mobile */
+    /* Vantagens em slider horizontal para mobile */
     .vantagens-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
         gap: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .vantagens-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .vantagem-item {
+        flex: 0 0 250px;
+        scroll-snap-align: center;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .lottie-container {
@@ -2127,13 +2124,13 @@ img {
     
     .hero-content h1 {
         font-size: 2rem;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
     
     .hero-content p {
         font-size: 1rem;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
-        font-weight: 400; /* Aumentar peso da fonte */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        font-weight: 400;
     }
     
     .section-header {
@@ -2157,16 +2154,17 @@ img {
     }
     
     .destaque-item {
-        width: 280px; /* Reduzido para telas menores */
+        width: 280px;
     }
     
     .destaque-info .btn-comprar {
         min-width: 120px;
         padding: 0.6rem 1.2rem;
         font-size: 0.75rem;
-        font-weight: 600; /* Aumentar peso da fonte */
-        background-color: rgba(0, 0, 0, 0.6); /* Aumentar opacidade do fundo para melhor contraste */
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
+        font-weight: 600;
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border: 1px solid var(--color-dark);
     }
     
     .slider-nav-arrow {
@@ -2182,6 +2180,12 @@ img {
     }
     
     /* Vantagens ainda mais compactas */
+    .vantagem-item {
+        flex: 0 0 220px;
+        min-height: 180px;
+        padding: var(--spacing-md);
+    }
+    
     .lottie-container {
         width: 50px;
         height: 50px;
@@ -2190,12 +2194,10 @@ img {
     
     .vantagem-item h4 {
         font-size: 0.9rem;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Adicionar sombra para melhorar legibilidade */
     }
     
     .vantagem-item p {
         font-size: 0.8rem;
-        color: var(--color-grey-200); /* Cor mais clara para melhor contraste */
     }
 }
 
@@ -2249,23 +2251,10 @@ img {
     outline-offset: 2px;
 }
 
-/* Efeito hover em produtos */
-.produto-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity var(--transition-medium);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.produto-item:hover::before {
-    opacity: 1;
+/* Efeito hover em produtos - removido overlay */
+.produto-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Melhorias adicionais de contraste */
@@ -2383,11 +2372,6 @@ img {
 .empty-cart {
     color: var(--color-grey-600);
     font-weight: 500;
-}
-
-/* Melhorar contraste no overlay dos produtos */
-.produto-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 70%, transparent);
 }
 
 /* Melhorar contraste para o botão de limpeza de pesquisa */
